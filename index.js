@@ -17,7 +17,7 @@ var parseShittyQueryString = function(q) {
 		return {};
 	}
 
-	return q.replace(/\+/g, ' ').split('&').reduce(function(r, p) {
+	return q.replace(/\+/g, ' ').split('#').reduce(function(r, p) {
 		var kv = p.split('=');
 		var key = kv[0];
 		var val = kv[1];
